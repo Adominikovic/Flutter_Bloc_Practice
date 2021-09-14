@@ -1,10 +1,8 @@
-# bloc_practice
+# Flutter BloC Practice Project
 
-Flutter Bloc Practice
+Flutter BloC Practice
 
-## Getting Started
-
-The purpose of the project is to practice the Flutter Bloc architectural pattern.
+The purpose of the project is to practice the Flutter BloC architectural pattern.
 I use the default flutter counter app and rewrite using the bloc architecture.
 
 The main goals of this project are understanding:
