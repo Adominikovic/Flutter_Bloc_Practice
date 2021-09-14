@@ -18,6 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: widget.color,
         title: Text(widget.title),
       ),
       body: Center(
@@ -77,22 +78,25 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 24,
             ),
             MaterialButton(
-              color: widget.color,
+              color: Colors.redAccent,
               onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => BlocProvider.value(
-                      value: BlocProvider.of<CounterCubit>(context),
-                      child: SecondScreen(
-                        title: 'Second Screen',
-                        color: Colors.redAccent,
-                      ),
-                    ),
-                  ),
-                );
+                Navigator.of(context).pushNamed('/second');
               },
               child: Text(
                 'go to second screen',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            SizedBox(
+              height: 24,
+            ),
+            MaterialButton(
+              color: Colors.greenAccent,
+              onPressed: () {
+                Navigator.of(context).pushNamed('/third');
+              },
+              child: Text(
+                'go to third screen',
                 style: TextStyle(color: Colors.white),
               ),
             ),
